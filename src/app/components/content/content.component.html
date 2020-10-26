@@ -1,0 +1,17 @@
+<div class="content">
+  <div class="inner-content">
+    <div class="sidebar" *ngFor="let list of category">
+      <a class="a" href="#"><img [src]='list.url'/></a>
+      <a class="a" href="#">{{list.name}}</a>
+    </div>
+  </div>
+</div>
+<div class="menu">
+  <div class="inner-menu">
+    <div class="menuItemDiv">
+      <a href="#" class="menuItem" *ngFor="let menu of menus; let i = index" (click)="check(i)">
+        {{menu | slice:1}}
+      </a>
+    </div>
+  </div>
+</div>
