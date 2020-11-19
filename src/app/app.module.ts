@@ -10,10 +10,22 @@ import { ContentComponent } from './components/content/content.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
+import { AboutGuard } from './guards/about.guard';
+import { ExitAboutGuard } from './guards/exit-about.guard';
+import { SigninComponent } from './components/signin/signin.component';
+import { ExitSigninGuard } from './guards/exit-signin.guard';
 
 const appRoutes: Routes = [
   {path: '', component: ContentComponent},
-  {path: 'about', component: AboutComponent},
+  {
+    path: 'about', component: AboutComponent,
+    canActivate: [AboutGuard],
+    canDeactivate: [ExitAboutGuard]
+  },
+  {
+    path: 'signin', component: SigninComponent,
+    canDeactivate: [ExitSigninGuard]
+  }
 ];
 
 @NgModule({
@@ -22,7 +34,8 @@ const appRoutes: Routes = [
     ContentComponent,
     HeaderComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +43,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     FormsModule
   ],
-  providers: [],
+  providers: [AboutGuard, ExitAboutGuard, ExitSigninGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

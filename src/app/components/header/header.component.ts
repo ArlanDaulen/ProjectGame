@@ -14,4 +14,5 @@ export class HeaderComponent implements OnInit{
   constructor() { }
   main : string = "main"
   about : string = "about us"
+  signin : string = "sign in"
 }

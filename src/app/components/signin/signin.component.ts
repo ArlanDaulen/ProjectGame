@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ComponentCanDeactivate } from '..//..//guards/exit-about.guard';
+import { ComponentCanDeactivate } from '..//..//guards/exit-signin.guard';
 import { Observable } from "rxjs";
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  selector: 'app-signin',
+  templateUrl: './signin.component.html',
+  styleUrls: ['./signin.component.css']
 })
-export class AboutComponent implements OnInit {
+export class SigninComponent implements OnInit {
   saved: boolean = false;
   save(){
     this.saved = true;
@@ -20,8 +20,6 @@ export class AboutComponent implements OnInit {
       return true;
     }
   }
-  about : string = "Aboout Us"
-
   constructor() { }
 
   ngOnInit(): void {
