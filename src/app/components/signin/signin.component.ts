@@ -8,6 +8,8 @@ import { Observable } from "rxjs";
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent implements OnInit {
+
+  //Route Guard
   saved: boolean = false;
   save(){
     this.saved = true;
@@ -20,6 +22,11 @@ export class SigninComponent implements OnInit {
       return true;
     }
   }
+//Template-Driven Form
+  onSubmit(value: any){
+    console.log('Signed in', value);
+  }
+
   constructor() { }
 
   ngOnInit(): void {

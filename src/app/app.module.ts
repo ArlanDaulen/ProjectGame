@@ -14,6 +14,8 @@ import { AboutGuard } from './guards/about.guard';
 import { ExitAboutGuard } from './guards/exit-about.guard';
 import { SigninComponent } from './components/signin/signin.component';
 import { ExitSigninGuard } from './guards/exit-signin.guard';
+import { SignupComponent } from './components/signup/signup.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   {path: '', component: ContentComponent},
@@ -25,6 +27,10 @@ const appRoutes: Routes = [
   {
     path: 'signin', component: SigninComponent,
     canDeactivate: [ExitSigninGuard]
+  },
+  {
+    path: 'signup', component: SignupComponent,
+    canDeactivate: [ExitSigninGuard]
   }
 ];
 
@@ -35,13 +41,15 @@ const appRoutes: Routes = [
     HeaderComponent,
     FooterComponent,
     AboutComponent,
-    SigninComponent
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [AboutGuard, ExitAboutGuard, ExitSigninGuard],
   bootstrap: [AppComponent]
