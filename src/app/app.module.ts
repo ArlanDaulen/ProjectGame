@@ -16,6 +16,7 @@ import { SigninComponent } from './components/signin/signin.component';
 import { ExitSigninGuard } from './guards/exit-signin.guard';
 import { SignupComponent } from './components/signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const appRoutes: Routes = [
   {path: '', component: ContentComponent},
@@ -49,7 +50,8 @@ const appRoutes: Routes = [
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [AboutGuard, ExitAboutGuard, ExitSigninGuard],
   bootstrap: [AppComponent]

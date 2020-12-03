@@ -16,7 +16,6 @@ export class DataService {
     {id: 8, name: "The Evil Within 2", url: "https://s1.torrents-igruha.org/uploads/posts/2017-08/1501804752__cover.jpg"},
     {id: 9, name: "Half-Life 1", url: "https://s1.torrents-igruha.org/uploads/posts/2020-05/1589842330__cover.jpg"}
   ]
-
   private top50 = [
     {id: 1, name: "Batman Arkham Knight", url: "https://s1.torrents-igruha.org/uploads/posts/2015-05/1432029107_batman_arkham_knight-2479245.jpg"},
     {id: 2, name: "Dead Space 2", url: "https://s1.torrents-igruha.org/uploads/posts/2015-11/1446747448_dead-space-2_us_esrb_pc.jpg"},
@@ -28,7 +27,6 @@ export class DataService {
     {id: 8, name: "BioShock Infinite The Complete Edition", url: "https://s1.torrents-igruha.org/uploads/posts/2015-07/1436276345_bioshek.jpg"},
     {id: 9, name: "Heavy Rain", url: "https://s1.torrents-igruha.org/uploads/posts/2019-03/1553455002__cover.jpg"}
   ]
-
   private top20: any[] = [
     {id: 1, name: "Star Wars Jedi Fallen Order", url: "https://s1.torrents-igruha.org/uploads/posts/2019-09/1569491270__cover.jpg"},
     {id: 2, name: "Assassin's Creed 3", url: "https://s1.torrents-igruha.org/uploads/posts/2017-12/1514555669__cover.jpg"},
@@ -40,7 +38,6 @@ export class DataService {
     {id: 8, name: "Need for Speed Most Wanted 2005", url: "https://s1.torrents-igruha.org/uploads/posts/2015-06/1435606324_black_edition.jpg"},
     {id: 9, name: "Control", url: "https://s1.torrents-igruha.org/uploads/posts/2020-03/1585267153__cover.jpg"}
   ]
-
   private survival: any[] = [
     {id: 1, name: "The Survivalists", url: "https://s1.torrents-igruha.org/uploads/posts/2020-02/1582390959__cover.jpg"},
     {id: 2, name: "Dead Age 2", url: "https://s1.torrents-igruha.org/uploads/posts/2020-02/1582551946__cover.jpg"},
@@ -52,7 +49,6 @@ export class DataService {
     {id: 8, name: "The Long Dark", url: "https://s1.torrents-igruha.org/uploads/posts/2018-12/1545085601__cover.jpg"},
     {id: 9, name: "7 Days to Die", url: "https://s1.torrents-igruha.org/uploads/posts/2020-07/1593722089__cover.jpg"}
   ]
-
   private strategy: any[] = [
     {id: 1, name: "Desperados 3", url: "https://s1.torrents-igruha.org/uploads/posts/2020-06/1591050340__cover.jpg"},
     {id: 2, name: "Overland", url: "https://s1.torrents-igruha.org/uploads/posts/2019-09/1568981196__cover.jpg"},
@@ -64,7 +60,6 @@ export class DataService {
     {id: 8, name: "Grim Nights", url: "https://s1.torrents-igruha.org/uploads/posts/2019-11/1573219200_15.jpg"},
     {id: 9, name: "Battle Brothers Blazing Deserts", url: "https://s1.torrents-igruha.org/uploads/posts/2018-01/1517008444__cover.jpg"}
   ]
-
   private sport: any[] = [
     {id: 1, name: "RIDE 4", url: "https://s1.torrents-igruha.org/uploads/posts/2020-10/1602185534__cover.jpg"},
     {id: 2, name: "FIFA 21", url: "https://s1.torrents-igruha.org/uploads/posts/2020-10/1601896759__cover.jpg"},
@@ -76,7 +71,6 @@ export class DataService {
     {id: 8, name: "Creed Rise to Glory", url: "https://s1.torrents-igruha.org/uploads/posts/2020-04/1586036302_15.jpg"},
     {id: 9, name: "rFactor 2", url: "https://s1.torrents-igruha.org/uploads/posts/2020-06/1591020176_5.jpg"}
   ]
-
   private rpg: any[] = [
     {id: 1, name: "The Revolt Awakening", url: "https://s1.torrents-igruha.org/uploads/posts/2020-10/1602184533__cover.jpg"},
     {id: 2, name: "Ikenfell", url: "https://s1.torrents-igruha.org/uploads/posts/2020-10/1602187773__cover.jpg"},
@@ -88,7 +82,6 @@ export class DataService {
     {id: 8, name: "Remnant From the Ashes", url: "https://s1.torrents-igruha.org/uploads/posts/2018-07/1532339583__cover.jpg"},
     {id: 9, name: "Reigns", url: "https://s1.torrents-igruha.org/uploads/posts/2020-08/1598827413_5.jpg"}
   ]
-
   private fighting: any[] = [
     {id: 1, name: "Mortal Kombat 10", url: "https://s1.torrents-igruha.org/uploads/posts/2014-09/1412081341_82b88e61043b898ca895ea143f65fc6a.jpg"},
     {id: 2, name: "Dead or Alive 6", url: "https://s1.torrents-igruha.org/uploads/posts/2019-03/1551461817__cover.jpg"},
@@ -100,7 +93,6 @@ export class DataService {
     {id: 8, name: "Tekken 7", url: "https://s1.torrents-igruha.org/uploads/posts/2017-06/1496419751__cover.jpg"},
     {id: 9, name: "Kung Fu Panda Showdown of Legendary Legends", url: "https://s1.torrents-igruha.org/uploads/posts/2015-08/1440519157_panda.jpg"},
   ]
-
   private content: any[] = [
     {id: 1, name: 'World of Tanks', url: "https://s1.torrents-igruha.org/1499895408_mir-tankov.jpg"},
     {id: 2, name: 'Men Of War II Arena', url: "https://s1.torrents-igruha.org/uploads/posts/2020-09/1600445157_cover.jpg"},
@@ -115,7 +107,6 @@ export class DataService {
     {id: 11, name: 'Bermuda Lost Survival', url: "https://s1.torrents-igruha.org/uploads/posts/2017-08/1502031572__cover.jpg"},
     {id: 12, name: 'Project Cars 3', url: "https://s1.torrents-igruha.org/uploads/posts/2020-08/1598357709_packshot-9c90c7f35fb4cbd8490d4c332a2d2baf-1.jpg"}
   ]
-
   private adventure: any[] = [
     {id: 1, name: 'Caves of QUD', url: "https://s1.torrents-igruha.org/uploads/posts/2019-03/1551733242__cover.jpg"},
     {id: 2, name: 'Dark Light', url: "https://s1.torrents-igruha.org/uploads/posts/2020-06/1591656848_2.jpg"},
@@ -127,7 +118,6 @@ export class DataService {
     {id: 8, name: 'Prodeus', url: "https://s1.torrents-igruha.org/uploads/posts/2019-10/1571685001_4.jpg"},
     {id: 9, name: 'Inmost', url: "https://s1.torrents-igruha.org/uploads/posts/2019-04/1555763245__cover.jpg"}
   ]
-
   private action: any[] = [
     {id: 1, name: 'Left 4 Dead 2', url: "https://s1.torrents-igruha.org/uploads/posts/2019-04/1554900064__cover.jpg"},
     {id: 2, name: 'Dark Light', url: "https://s1.torrents-igruha.org/uploads/posts/2020-06/1591656848_2.jpg"},
@@ -139,7 +129,6 @@ export class DataService {
     {id: 8, name: 'KINGDOMS', url: "https://s1.torrents-igruha.org/uploads/posts/2019-08/1566504546__cover.jpg"},
     {id: 9, name: 'Metro 2033', url: "https://s1.torrents-igruha.org/uploads/posts/2020-09/1600975113_2.jpg"}
   ]
-
   private horror: any[] = [
     {id: 1, name: "Chernobylite", url: "https://s1.torrents-igruha.org/uploads/posts/2019-10/1571314054__cover.jpg"},
     {id: 2, name: "Don't Starve + Hamlet", url: "https://s1.torrents-igruha.org/uploads/posts/2018-11/1542820105__cover.jpg"},
@@ -151,7 +140,6 @@ export class DataService {
     {id: 9, name: "The Light", url: "https://s1.torrents-igruha.org/uploads/posts/2020-06/1591392384_5.jpg"},
     {id: 9, name: "ZAAM", url: "https://s1.torrents-igruha.org/uploads/posts/2020-08/1596915024_8.jpg"}
   ]
-
   private shooting: any[] = [
     {id: 1, name: "State of Decay 2", url: "https://s1.torrents-igruha.org/uploads/posts/2020-03/1584205290__cover.jpg"},
     {id: 2, name: "Control", url: "https://s1.torrents-igruha.org/uploads/posts/2020-03/1585267153__cover.jpg"},
@@ -163,7 +151,6 @@ export class DataService {
     {id: 8, name: "Watch Dogs", url: "https://s1.torrents-igruha.org/uploads/posts/2020-05/1589634162_try_h5f7rd.jpeg"},
     {id: 9, name: "Crossout", url: "https://s1.torrents-igruha.org/uploads/posts/2017-11/1511904454_cover.jpg"}
   ]
-
   private race: any[] = [
     {id: 1, name: "Art of rally", url: "https://s1.torrents-igruha.org/uploads/posts/2020-06/1592931947_3.jpg"},
     {id: 2, name: "Project Cars 3", url: "https://s1.torrents-igruha.org/uploads/posts/2020-08/1598357709_packshot-9c90c7f35fb4cbd8490d4c332a2d2baf-1.jpg"},

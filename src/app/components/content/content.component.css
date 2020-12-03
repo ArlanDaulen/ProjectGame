@@ -56,3 +56,9 @@ img {
   background-color: #006500;
   color: gray;
 }
+
+.previous-next {
+  background-color: blue;
+  width: 1000px;
+  height: 10px;
+}

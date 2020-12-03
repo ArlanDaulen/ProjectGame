@@ -9,41 +9,58 @@ import { DataService } from '..//..//data.service';
 })
 export class ContentComponent implements OnInit {
 
-  category: any[] = []
-
     menus = ["/Adventure", "/Race", "/Horror", "/Shooting", "/Survival", "/Top20", "/Top50", "/Top100", "/Action", "/Fighting", "/RPG", "/Sport", "/Strategy", "/Main"];
 
   constructor(private dataService: DataService) { }
 
+  category: any[] = []
+
   check(index) {
-    if (index == 0) {
-      this.category = this.dataService.adventuref()
-    } else if (index == 1) {
-      this.category = this.dataService.racef()
-    } else if (index == 2) {
-      this.category = this.dataService.horrorf()
-    } else if (index == 3) {
-      this.category = this.dataService.shootingf()
-    } else if (index == 4) {
-      this.category = this.dataService.survivalf()
-    } else if (index == 5) {
-      this.category = this.dataService.top20f()
-    } else if (index == 6) {
-      this.category = this.dataService.top50f()
-    } else if (index == 7) {
-      this.category = this.dataService.top100f()
-    } else if (index == 8) {
-      this.category = this.dataService.actionf()
-    } else if (index == 9) {
-      this.category = this.dataService.fightingf()
-    } else if (index == 10) {
-      this.category = this.dataService.rpgf()
-    } else if (index == 11) {
-      this.category = this.dataService.sportf()
-    } else if (index == 12) {
-      this.category = this.dataService.strategyf()
-    } else if (index == 13) {
-      this.category = this.dataService.mainf()
+    switch (index) {
+      case 0:
+        this.category = this.dataService.adventuref();
+        break;
+      case 1:
+        this.category = this.dataService.racef();
+        break;
+      case 2:
+        this.category = this.dataService.horrorf();
+        break;
+      case 3:
+        this.category = this.dataService.shootingf();
+        break;
+      case 4:
+        this.category = this.dataService.survivalf();
+        break;
+      case 5:
+        this.category = this.dataService.top20f();
+        break;
+      case 6:
+        this.category = this.dataService.top50f();
+        break;
+      case 7:
+        this.category = this.dataService.top100f();
+        break;
+      case 8:
+        this.category = this.dataService.actionf();
+        break;
+      case 9:
+        this.category = this.dataService.fightingf();
+        break;
+      case 10:
+        this.category = this.dataService.rpgf();
+        break;
+      case 11:
+        this.category = this.dataService.sportf();
+        break;
+      case 12:
+        this.category = this.dataService.strategyf();
+        break;
+      case 13:
+        this.category = this.dataService.mainf();
+        break;
+      default:
+        break;
     }
   }
 
