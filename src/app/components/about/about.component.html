@@ -1,8 +1,11 @@
-<div class="">
+<div class="main">
   <h1>About Us</h1>
   <p>All of work done by student Daulen Arlan</p>
-  <div class="btn">
-    <input type="text" class="form-control" placeholder="Comments" aria-label="Comment" aria-describedby="basic-addon1">
-    <button class="btn btn-default" (click)="save()">Comment</button>
+  <div class="about">
+    <input type="text" id="input" class="form-control" placeholder="Comments">
+    <button id="button" class="btn">Comment</button>
+    <div class="" *ngFor="let i of comments" >
+      {{i}}
+    </div>
   </div>
 </div>

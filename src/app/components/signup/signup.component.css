@@ -1,7 +1,20 @@
 .signUp{
+  background-color: #222629;
+  color: #86C232;
   width: 50%;
-  height: 600px;
+  height: 654px;
   float: center;
   margin-left: 380px;
   padding-top: 200px
+}
+
+#button {
+  background-color: #86C232;
+  color: #222629;
+  float: left;
+}
+
+.main {
+    background-color: #222629;
+    height: 709px;
 }

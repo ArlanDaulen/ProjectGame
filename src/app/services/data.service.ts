@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
+import { HttpService } from '..//.//services/http.service';
+import { Game } from '..//classes/game';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  private top100 = [
+
+  category: Game[]=[];
+  /*private top100 = [
     {id: 1, name: "STALKER Clear Sky", url: "https://s1.torrents-igruha.org/uploads/posts/2020-05/1590357456__cover.jpg"},
     {id: 2, name: "Prey 2017 + Mooncrash", url: "https://s1.torrents-igruha.org/uploads/posts/2020-05/1590788788__cover.jpg"},
     {id: 3, name: "The Elder Scrolls 5 Skyrim Special Edition", url: "https://s1.torrents-igruha.org/uploads/posts/2020-05/1590797610__cover.jpg"},
@@ -15,7 +19,10 @@ export class DataService {
     {id: 7, name: "Spec Ops The Line", url: "https://s1.torrents-igruha.org/uploads/posts/2015-10/1445362589_spec-ops-the-line-torrent-game-pc-download.jpg"},
     {id: 8, name: "The Evil Within 2", url: "https://s1.torrents-igruha.org/uploads/posts/2017-08/1501804752__cover.jpg"},
     {id: 9, name: "Half-Life 1", url: "https://s1.torrents-igruha.org/uploads/posts/2020-05/1589842330__cover.jpg"}
-  ]
+  ]*/
+  top100f(){
+    return this.http.getData().subscribe(data => this.category=data["top100"]);
+  }
   private top50 = [
     {id: 1, name: "Batman Arkham Knight", url: "https://s1.torrents-igruha.org/uploads/posts/2015-05/1432029107_batman_arkham_knight-2479245.jpg"},
     {id: 2, name: "Dead Space 2", url: "https://s1.torrents-igruha.org/uploads/posts/2015-11/1446747448_dead-space-2_us_esrb_pc.jpg"},
@@ -191,10 +198,6 @@ export class DataService {
     return this.top50
   }
 
-  top100f(){
-    return this.top100
-  }
-
   actionf(){
     return this.action
   }
@@ -219,5 +222,5 @@ export class DataService {
     return this.content
   }
 
-  constructor() { }
+  constructor(private http: HttpService) { }
 }

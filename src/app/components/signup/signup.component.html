@@ -1,24 +1,24 @@
-<div class="signUp">
-  <h1>Sign Up</h1>
-  <form [formGroup]="myForm" novalidate (ngSubmit)="submit()">
-    <div class="form-group">
-      <label>Name</label>
-      <input class="form-control" name="name" formControlName="userName"/>
-      <div class="alert alert-danger" *ngIf="myForm.controls['userName'].invalid && myForm.controls['userName'].touched">
-        Enter your name
+<div class="main">
+  <div class="signUp">
+    <h1>Sign Up</h1>
+    <form [formGroup]="myForm" novalidate (ngSubmit)="submit()">
+      <div class="form-group">
+        <label>Name</label>
+        <input (click)="save()" class="form-control" name="name" formControlName="userName" placeholder="Name"/>
+        <div class="alert alert-danger" *ngIf="myForm.controls['userName'].invalid && myForm.controls['userName'].touched">
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <label>Email</label>
-      <input class="form-control" name="email" formControlName="userEmail"/>
-      <div class="alert alert-danger" *ngIf="myForm.controls['userEmail'].invalid && myForm.controls['userEmail'].touched">
-        Incorrect email
+      <div class="form-group">
+        <label>Email</label>
+        <input  (click)="save()" class="form-control" name="email" formControlName="userEmail" placeholder="Email"/>
+        <div class="alert alert-danger" *ngIf="myForm.controls['userEmail'].invalid && myForm.controls['userEmail'].touched">
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <label>Password</label>
-      <input type="password" class="form-control" name="password" formControlName="userPass"/>
-    </div>
-    <button class="btn btn-primary" [disabled]="myForm.invalid" name="button">Submit</button>
-  </form>
+      <div class="form-group">
+        <label>Password</label>
+        <input (click)="save()" type="password" class="form-control" name="password" formControlName="userPass" placeholder="Password"/>
+      </div>
+      <button id="button" class="btn">Submit</button>
+    </form>
+  </div>
 </div>

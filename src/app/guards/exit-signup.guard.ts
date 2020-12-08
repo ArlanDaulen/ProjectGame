@@ -5,7 +5,7 @@ export interface ComponentCanDeactivate{
     canDeactivate: () => boolean | Observable<boolean>;
 }
 
-export class ExitAboutGuard implements CanDeactivate<ComponentCanDeactivate>{
+export class ExitSignupGuard implements CanDeactivate<ComponentCanDeactivate>{
 
     canDeactivate(component: ComponentCanDeactivate) : Observable<boolean> | boolean{
 

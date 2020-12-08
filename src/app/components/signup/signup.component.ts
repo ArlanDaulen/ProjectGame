@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ComponentCanDeactivate } from '..//..//guards/exit-signin.guard';
 import { Observable } from "rxjs";
 import { FormGroup, FormControl, Validators} from '@angular/forms';
+import { User } from '..//..//classes/user';
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -16,7 +18,7 @@ export class SignupComponent implements OnInit {
   }
 
   canDeactivate() : boolean | Observable<boolean>{
-    if(!this.saved){
+    if(this.saved){
       return confirm("Do you want to leave the page?");
     }else{
       return true;
@@ -24,7 +26,7 @@ export class SignupComponent implements OnInit {
   }
 
   myForm : FormGroup = new FormGroup({
-    "userName": new FormControl("Sam", Validators.required),
+    "userName": new FormControl("", Validators.required),
     "userEmail": new FormControl("", [Validators.required, Validators.email]),
     "userPass": new FormControl("", Validators.required)
   });

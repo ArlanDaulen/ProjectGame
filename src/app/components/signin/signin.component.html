@@ -1,14 +1,25 @@
-<div class="signIn">
-  <h1>Sign In</h1>
-  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
-    <div class="form-group">
-      <label>Email</label>
-      <input type="text" class="form-control" name="email" ngModel>
-    </div>
-    <div class="form-group">
-      <label>Password</label>
-      <input type="password" class="form-control" name="pass" ngModel>
-    </div>
-    <button type="submit" class="btn btn-primary">Enter</button>
-  </form>
+<div class="main">
+  <div class="signIn">
+    <h1>Sign In</h1>
+    <form [formGroup]="myForm" novalidate (ngSubmit)="submit()">
+      <div class="form-group">
+        <label>Email</label>
+        <input  (click)="save()" class="form-control" name="email" formControlName="userEmail" placeholder="Email"/>
+        <div class="alert alert-danger" *ngIf="myForm.controls['userEmail'].invalid && myForm.controls['userEmail'].touched">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input (click)="save()" type="password" class="form-control" name="password" formControlName="userPass" placeholder="Password"/>
+      </div>
+      <button id="button" class="btn">Submit</button>
+    </form>
+    <br><br>
+    <p>If you haven't registered yet-><a routerLink='/signup'>{{signup}}</a></p>
+  </div>
+</div>
+
+<div *ngFor="let user of users">
+  <p style="color: green">Users name: {{user.name}}</p>
+  <p style="color: green">Users age: {{user.age}}</p>
 </div>

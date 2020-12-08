@@ -1,63 +1,66 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '..//..//data.service';
+import { HttpService } from '..//..//services/http.service';
+import { HttpClient } from '@angular/common/http';
+import { Game } from '..//..//classes/game';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
-  styleUrls: ['./content.component.css'],
-  providers: [ DataService ]
+  styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
 
+  searchText: string;
+
     menus = ["/Adventure", "/Race", "/Horror", "/Shooting", "/Survival", "/Top20", "/Top50", "/Top100", "/Action", "/Fighting", "/RPG", "/Sport", "/Strategy", "/Main"];
 
-  constructor(private dataService: DataService) { }
+  constructor(private http: HttpService, private https: HttpClient) { }
 
-  category: any[] = []
+  category: Game[] = [];
 
   check(index) {
     switch (index) {
       case 0:
-        this.category = this.dataService.adventuref();
+        return this.http.getData().subscribe(data => this.category=data["adventure"]);
         break;
       case 1:
-        this.category = this.dataService.racef();
+        this.http.getData().subscribe(data => this.category=data["race"]);
         break;
       case 2:
-        this.category = this.dataService.horrorf();
+        this.http.getData().subscribe(data => this.category=data["horror"]);
         break;
       case 3:
-        this.category = this.dataService.shootingf();
+        this.http.getData().subscribe(data => this.category=data["shooting"]);
         break;
       case 4:
-        this.category = this.dataService.survivalf();
+        this.http.getData().subscribe(data => this.category=data["survival"]);
         break;
       case 5:
-        this.category = this.dataService.top20f();
+        this.http.getData().subscribe(data => this.category=data["top20"]);
         break;
       case 6:
-        this.category = this.dataService.top50f();
+        this.http.getData().subscribe(data => this.category=data["top50"]);
         break;
       case 7:
-        this.category = this.dataService.top100f();
+        return this.https.get('assets/games.json').subscribe(data => this.category=data["top100"]);
         break;
       case 8:
-        this.category = this.dataService.actionf();
+        this.http.getData().subscribe(data => this.category=data["action"]);
         break;
       case 9:
-        this.category = this.dataService.fightingf();
+        this.http.getData().subscribe(data => this.category=data["fighting"]);
         break;
       case 10:
-        this.category = this.dataService.rpgf();
+        this.http.getData().subscribe(data => this.category=data["rpg"]);
         break;
       case 11:
-        this.category = this.dataService.sportf();
+        this.http.getData().subscribe(data => this.category=data["sport"]);
         break;
       case 12:
-        this.category = this.dataService.strategyf();
+        this.http.getData().subscribe(data => this.category=data["strategy"]);
         break;
       case 13:
-        this.category = this.dataService.mainf();
+        this.http.getData().subscribe(data => this.category=data["main"]);
         break;
       default:
         break;
@@ -65,7 +68,7 @@ export class ContentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-      this.category = this.dataService.mainf()
+      this.https.get('assets/games.json').subscribe((data: Game) => this.category = data["top100"]);
   }
 
 }
